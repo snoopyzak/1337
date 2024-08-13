@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/zaakrab/days/trello_prac/fizzbuzz",
+      "program": "/Users/zaakrab/days/trello_prac/fizzbuzz/build/Debug/outDebug"
+    }
+  ]
+}

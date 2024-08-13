@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/zaakrab/days/c03/C03/ft_strcmp",
+      "program": "/Users/zaakrab/days/c03/C03/ft_strcmp/build/Debug/outDebug"
+    }
+  ]
+}

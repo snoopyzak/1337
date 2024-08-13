@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/zaakrab/days/trello_prac/is_power_of_2",
+      "program": "/Users/zaakrab/days/trello_prac/is_power_of_2/build/Debug/outDebug"
+    }
+  ]
+}
