@@ -6,7 +6,7 @@
 /*   By: zaakrab <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 15:18:24 by zaakrab           #+#    #+#             */
-/*   Updated: 2024/08/14 17:58:16 by zaakrab          ###   ########.fr       */
+/*   Updated: 2024/08/14 18:30:40 by zaakrab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,23 @@
 
 int	do_op(int i, int j, char e)
 {
+	int	(*op[5])(int, int);
+
+	op[0] = &add;
+	op[1] = &subtract;
+	op[2] = &multiply;
+	op[3] = &divide;
+	op[4] = &mod;
 	if (e == '+')
-		return (i + j);
+		return (op[0](i, j));
 	if (e == '-')
-		return (i - j);
+		return (op[1](i, j));
 	if (e == '*')
-		return (i * j);
+		return (op[2](i, j));
 	if (e == '/')
-		return (i / j);
+		return (op[3](i, j));
 	if (e == '%')
-		return (i / j);
+		return (op[4](i, j));
 	else
 		return (0);
 }

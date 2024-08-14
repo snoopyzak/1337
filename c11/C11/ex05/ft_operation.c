@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_any.c                                           :+:      :+:    :+:   */
+/*   ft_operation.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zaakrab <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/14 17:52:05 by zaakrab           #+#    #+#             */
-/*   Updated: 2024/08/14 18:07:27 by zaakrab          ###   ########.fr       */
+/*   Created: 2024/08/14 18:24:07 by zaakrab           #+#    #+#             */
+/*   Updated: 2024/08/14 18:25:07 by zaakrab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-int	ft_any(char **tab, int (*f)(char*))
+int	add(int i, int j)
 {
-	int	i;
+	return (i + j);
+}
 
-	i = 0;
-	while (tab[i] != NULL)
-	{
-		if (f(tab[i]))
-			return (1);
-		i++;
-	}
-	return (0);
+int	subtract(int i, int j)
+{
+	return (i - j);
+}
+
+int	multiply(int i, int j)
+{
+	return (i * j);
+}
+
+int	divide(int i, int j)
+{
+	return (i / j);
+}
+
+int	mod(int i, int j)
+{
+	return (i % j);
 }
