@@ -5,32 +5,35 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zaakrab <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/14 17:36:30 by zaakrab           #+#    #+#             */
-/*   Updated: 2024/08/14 17:36:31 by zaakrab          ###   ########.fr       */
+/*   Created: 2024/08/14 21:39:09 by zaakrab           #+#    #+#             */
+/*   Updated: 2024/08/14 21:39:09 by zaakrab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(char *str)
 {
-	int	i;
 	int	sign;
-	int	res;
+	int	result;
+	int	i;
 
-	i = 0;
 	sign = 1;
-	res = 0;
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+	result = 0;
+	i = 0;
+	while (str[i] && (str[i] == '\f' || str[i] == '\t' || str[i] == ' '
+			|| str[i] == '\n' || str[i] == '\r' || str[i] == '\v'))
 		i++;
-	while (str[i] == '-' || str[i] == '+')
+	while (str[i] && (str[i] == '+' || str[i] == '-'))
 	{
 		if (str[i] == '-')
 			sign *= -1;
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (str[i] && str[i] >= '0' && str[i] <= '9')
 	{
-		res = res * 10 + str[i] - '0';
+		result *= 10;
+		result += str[i] - '0' ;
 		i++;
 	}
-	return (res * sign);
+	result *= sign;
+	return (result);
 }

@@ -1,36 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_operation.c                                     :+:      :+:    :+:   */
+/*   ft_sub.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zaakrab <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/14 18:24:07 by zaakrab           #+#    #+#             */
-/*   Updated: 2024/08/14 18:25:07 by zaakrab          ###   ########.fr       */
+/*   Created: 2024/08/14 21:39:38 by zaakrab           #+#    #+#             */
+/*   Updated: 2024/08/14 21:39:38 by zaakrab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	add(int i, int j)
+int	ft_sub(int a, int b)
 {
-	return (i + j);
-}
-
-int	subtract(int i, int j)
-{
-	return (i - j);
-}
-
-int	multiply(int i, int j)
-{
-	return (i * j);
-}
-
-int	divide(int i, int j)
-{
-	return (i / j);
-}
-
-int	mod(int i, int j)
-{
-	return (i % j);
+	return (a - b);
 }

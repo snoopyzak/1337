@@ -1,38 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_sort.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zaakrab <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/14 21:38:31 by zaakrab           #+#    #+#             */
-/*   Updated: 2024/08/14 21:38:32 by zaakrab          ###   ########.fr       */
+/*   Created: 2024/08/14 21:39:32 by zaakrab           #+#    #+#             */
+/*   Updated: 2024/08/14 21:39:33 by zaakrab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_sort(int *tab, int length, int (*f)(int, int))
-{
-	int	i;
-	int	is_sort;
+#include <unistd.h>
 
-	is_sort = 1;
-	i = 0;
-	while (i < length - 1 && is_sort)
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_putnbr(int nb)
+{
+	if (nb == -2147483648)
 	{
-		if ((*f)(tab[i], tab [i + 1]) < 0)
-			is_sort = 0;
-		i++;
+		ft_putchar('-');
+		ft_putchar('2');
+		ft_putnbr(147483648);
 	}
-	if (is_sort != 1)
+	else if (nb < 0)
 	{
-		is_sort = 1;
-		i = 0;
-		while (i < length - 1)
-		{
-			if ((*f)(tab[i], tab[i + 1]) > 0)
-				return (0);
-			i++;
-		}
+		ft_putchar('-');
+		nb = -nb;
+		ft_putnbr(nb);
 	}
-	return (1);
+	else if (nb > 9)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else
+		ft_putchar(nb + 48);
 }

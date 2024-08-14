@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_zero.c                                      :+:      :+:    :+:   */
+/*   do_op.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zaakrab <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/14 17:36:37 by zaakrab           #+#    #+#             */
-/*   Updated: 2024/08/14 17:54:50 by zaakrab          ###   ########.fr       */
+/*   Created: 2024/08/14 21:38:56 by zaakrab           #+#    #+#             */
+/*   Updated: 2024/08/14 21:38:57 by zaakrab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#ifndef DO_OP_H
+# define DO_OP_H
 
-void	ft_div_zero(void)
-{
-	int		i;
-	char	*s;
+int		ft_add(int a, int b);
+int		ft_sub(int a, int b);
+int		ft_mod(int a, int b);
+int		ft_div(int a, int b);
+int		ft_mul(int a, int b);
+int		ft_atoi(char *str);
+void	ft_putnbr(int nb);
 
-	s = "Stop : division by zero";
-	i = 0;
-	while (s[i] != 0)
-	{
-		write (1, &s[i++], 1);
-	}
-}
+#endif

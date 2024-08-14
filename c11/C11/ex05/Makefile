@@ -1,24 +1,19 @@
-#variables
+SRCS	= 	srcs/do-op.c srcs/ft_add.c srcs/ft_sub.c 	\
+			srcs/ft_mul.c srcs/ft_mod.c srcs/ft_atoi.c	\
+			srcs/ft_div.c srcs/ft_putnbr.c
+OBJS	= ${SRCS:.c=.o}
+NAME	= do-op
+CC		= gcc
+RM		= rm -f
+CFLAGS	= -Wall -Wextra -Werror
 
-SRCS 		= 	ft_putnbr.c		\
-	   			ft_atoi.c		\
-				ft_div_zero.c	\
-				ft_mod_zero.c	\
-				ft_operation.c	\
-	  		 	main.c
-RM 	 		= rm -f
-CC			= cc
-CFLAGS		= -Wall -Wextra -Werror
-NAME		= do-op
-
-#rules
-
-all: $(SRCS)
-	$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
+all:
+	${CC} ${CFLAGS} ${SRCS} -o ${NAME}
 
 clean:
-	$(RM) $(NAME)
+	${RM} ${OBJS}
 
 fclean: clean
+	${RM} ${NAME}
 
 re: fclean all
