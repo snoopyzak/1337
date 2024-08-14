@@ -6,7 +6,7 @@
 /*   By: zaakrab <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 17:51:59 by zaakrab           #+#    #+#             */
-/*   Updated: 2024/08/14 18:07:17 by zaakrab          ###   ########.fr       */
+/*   Updated: 2024/08/14 21:12:10 by zaakrab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ int	*ft_map(int *tab, int length, int (*f)(int))
 		mytab[i] = f(tab[i]);
 		i++;
 	}
-	return (tab);
+	return (mytab);
 }
